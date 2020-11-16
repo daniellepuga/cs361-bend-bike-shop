@@ -7,14 +7,14 @@ class Luggage
   def initialize(initial_capacity, items, bike)
     @capacity = initial_capacity
     @items = items
-    @bike = bike
+    @bike = Bike.new(id, color, price, extra_items)
   end
 
   def add(item)
     self.items << item
   end
 
-  def weight
+  def weight_times_ten
     self.items.size * 10
   end
 
